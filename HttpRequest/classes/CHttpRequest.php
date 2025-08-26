@@ -6,7 +6,7 @@ require(__DIR__ . '/../composer/vendor/autoload.php');
 use E, EC;
 
 class CHttpRequest {
-
+    private $client = null;
     private $auth = null;
     private $headers = null;
 
@@ -73,5 +73,4 @@ class CHttpRequest {
     public function setHeaders(array $headers) {
         $this->headers = $headers;
     }
-
 }
