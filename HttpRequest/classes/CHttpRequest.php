@@ -1,7 +1,7 @@
 <?php namespace EC\HttpRequest;
 defined('_ESPADA') or die(NO_ACCESS);
 
-require(__DIR__ . '/../composer/vendor/autoload.php');
+require(PATH_ESITE.'/composer/vendor/autoload.php');
 
 use E, EC;
 
@@ -39,7 +39,7 @@ class CHttpRequest {
         curl_setopt($ch, CURLOPT_URL, "icanhazip.com");
 
         //return the transfer as a string
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
         // $output contains the output string
         $output = curl_exec($ch);
